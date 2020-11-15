@@ -16,18 +16,6 @@ app.use(bodyParser.json())
 
 
 
-const express=require('express');
-
-const app=express();
-
-app.use(express.json());
-// app.get('/',(req,res)=>{
-//     res.send("hello world");
-//     num1=req.body.num1;
-//     num2=req.body.num2;
-// })
-
-
 app.post('/add',(req,res)=>{
     const num1=parseInt(req.body.num1);
     const num2=parseInt(req.body.num2);
@@ -55,7 +43,6 @@ app.post('/divide',(req,res)=>{
     result=num1/num2;
     res.send({status: num2===0?"error":"success",message: num2===0?"Cannot divide by zero":"The division of given numbers",sum:result});
 })
-
 
 
 
