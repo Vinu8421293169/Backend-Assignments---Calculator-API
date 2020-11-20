@@ -29,7 +29,7 @@ app.post('/sub',(req,res)=>{
     const num1=req.body.num1;
     const num2=req.body.num2;
     result=num1-num2;
-    res.send({status: "success",message:typeof num1==='string'|| typeof num2=== "string"?"Invalid data types": result<-1000000?"Underflow":result>1000000?"Overflow":"the sum of given two numbers",sum:result});
+    res.send({status: "success",message:typeof num1==='string'|| typeof num2=== "string"?"Invalid data types": result<-1000000?"Underflow":result>1000000?"Overflow":"the difference of given two numbers",sum:result});
 })
 
 app.post('/multiply',(req,res)=>{
