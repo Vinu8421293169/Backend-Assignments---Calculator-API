@@ -35,7 +35,8 @@ app.post('/sub',(req,res)=>{
 app.post('/multiply',(req,res)=>{
     const num1=req.body.num1;
     const num2=req.body.num2;
-    res.send({status: "success",message:typeof num1==='string'|| typeof num2=== "string"?"Invalid data types": result<-1000000?"Underflow":result>1000000?"Overflow":"The product of given numbers",result:num1*num2});
+    const result=num1*num2;
+    res.send({status: "success",message:typeof num1==='string'|| typeof num2=== "string"?"Invalid data types": result<-1000000?"Underflow":result>1000000?"Overflow":"The product of given numbers",result});
 })
 
 app.post('/divide',(req,res)=>{
