@@ -18,28 +18,28 @@ app.get('/',(req,res)=>{
 })
 
 
-app.patch('/add',(req,res)=>{
+app.post('/add',(req,res)=>{
     const num1=parseFloat(req.body.num1);
     const num2=parseFloat(req.body.num2);
     result=num1+num2;
     res.send({status: "success",message: result<-1000000?"Underflow":result>1000000?"Overflow":"the sum of given two numbers",sum:result});
 })
 
-app.patch('/sub',(req,res)=>{
+app.post('/sub',(req,res)=>{
     const num1=parseFloat(req.body.num1);
     const num2=parseFloat(req.body.num2);
     result=num1-num2;
     res.send({status: "success",message: result<-1000000?"Underflow":result>1000000?"Overflow":"the sum of given two numbers",sum:result});
 })
 
-app.patch('/multiply',(req,res)=>{
+app.post('/multiply',(req,res)=>{
     const num1=parseFloat(req.body.num1);
     const num2=parseFloat(req.body.num2);
     result=num1*num2;
     res.send({status: "success",message: result<-1000000?"Underflow":result>1000000?"Overflow":"The product of given numbers",sum:result});
 })
 
-app.patch('/divide',(req,res)=>{
+app.post('/divide',(req,res)=>{
     const num1=parseFloat(req.body.num1);
     const num2=parseFloat(req.body.num2);
     result=num1/num2;
